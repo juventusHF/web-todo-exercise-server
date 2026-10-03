@@ -1,0 +1,7 @@
+node_modules
+dist
+.env
+/.idea/.gitignore
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/web-todo-exercise-server.iml

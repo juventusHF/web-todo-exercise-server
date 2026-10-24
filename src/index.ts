@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import { randomUUID } from "node:crypto";
 
 interface Todo {
@@ -13,6 +14,7 @@ const todos = new Map<string, Todo>();
 const isString = (v: unknown): v is string => typeof v === "string";
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 app.get("/todos", (_req, res) => {

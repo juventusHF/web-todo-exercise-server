@@ -1,6 +1,6 @@
 # web-todo-exercise-server
 
-A small Express + TypeScript server for managing todos. Data is kept in memory, so it is lost whenever the server restarts.
+A small Express + TypeScript server for managing todos. Data is kept in memory. On startup, the server is seeded with a few example todos.
 
 ## Data model
 

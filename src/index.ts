@@ -1,17 +1,13 @@
 import express from "express";
 import cors from "cors";
 import { randomUUID } from "node:crypto";
-
-interface Todo {
-  id: string;
-  name: string;
-  value: string;
-}
+import type { Todo } from "./model";
+import { seedTodos } from "./seed";
+import { isString } from "./validation";
 
 const port = 3000;
 const todos = new Map<string, Todo>();
-
-const isString = (v: unknown): v is string => typeof v === "string";
+seedTodos(todos);
 
 const app = express();
 app.use(cors());
